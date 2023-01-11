@@ -69,7 +69,7 @@
 
 .responsiveNavbar .links {
     display: flex;
-    gap: 2em;
+    gap: 0.5em;
 }
 
 .responsiveNavbar .links .link {

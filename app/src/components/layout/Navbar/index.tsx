@@ -26,19 +26,25 @@ function Navbar(){
                 </div>
                 <nav>
                     <ul className={styles.links}>
-                        <li className={styles.link}>
-                            <Link to="/">Home</Link>
-                        </li>
-                        <li className={styles.link}>
-                            <Link to="/login">Login</Link>
-                        </li>
-                        {localStorage.getItem("login") && (
+                        {localStorage.getItem("login") ? (
                             <>
+                                <li className={styles.link}>
+                                    <Link to="/">Home</Link>
+                                </li>
                                 <li className={styles.link}>
                                     <Link to="/createpost">Create Post</Link>
                                 </li>
                                 <li className={styles.link} onClick={logOut}>
                                     <Link to="/login">Log Out</Link>
+                                </li>
+                            </>
+                        ): (
+                            <>
+                                <li className={styles.link}>
+                                    <Link to="/">Home</Link>
+                                </li>
+                                <li className={styles.link}>
+                                    <Link to="/login">Login</Link>
                                 </li>
                             </>
                         )}
@@ -49,19 +55,25 @@ function Navbar(){
             <section className={showNavbarResponsive ? styles.responsiveNavbar : styles.closeResponsiveNavbar}>
                 <nav>
                     <ul className={styles.links}>
-                        <li className={styles.link}>
-                            <Link to="/">Home</Link>
-                        </li>
-                        <li className={styles.link}>
-                            <Link to="/login">Login</Link>
-                        </li>
-                        {localStorage.getItem("login") && (
+                        {localStorage.getItem("login") ? (
                             <>
+                                <li className={styles.link}>
+                                    <Link to="/">Home</Link>
+                                </li>
                                 <li className={styles.link}>
                                     <Link to="/createpost">Create Post</Link>
                                 </li>
                                 <li className={styles.link} onClick={logOut}>
                                     <Link to="/login">Log Out</Link>
+                                </li>
+                            </>
+                        ) : (
+                            <>
+                                <li className={styles.link}>
+                                    <Link to="/">Home</Link>
+                                </li>
+                                <li className={styles.link}>
+                                    <Link to="/login">Login</Link>
                                 </li>
                             </>
                         )}

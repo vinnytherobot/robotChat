@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { FaUserCircle } from "react-icons/fa";
 
 import { PostData } from "../../../types/types";
 
@@ -21,7 +22,9 @@ function Home(){
             {posts.map((post) => (
                 <div className={styles.post} key={post.id}>
                     <header>
-                        <span className={styles.image}></span>
+                        <span className={styles.image}>
+                            <FaUserCircle size={35}/>
+                        </span>
                         <span className={styles.name}>{post.name} |</span>
                         <span className={styles.username}>@{post.username}</span>
                     </header>

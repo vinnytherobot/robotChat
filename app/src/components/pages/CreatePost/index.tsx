@@ -9,6 +9,11 @@ function CreatePost(){
     const [post, setPost] = useState<PostData>(Object);
     const navigate = useNavigate();
 
+    if(!localStorage.getItem("login")){
+        window.location.href = "/"
+        return null;
+    }
+
     const UserPost = {
         name: localStorage.getItem("name"),
         username: localStorage.getItem("username"),
@@ -29,8 +34,8 @@ function CreatePost(){
             },
             body: JSON.stringify(UserPost)
         })
-
-        navigate("/")
+        navigate("/");
+        window.location.reload();
     }
 
     return(

@@ -16,21 +16,26 @@ function Login(){
 
     function handleSubmit(e: FormEvent<HTMLFormElement>){
         e.preventDefault();
+        
+        if(!localStorage.getItem("login")){
+            fetch("https://vinnyrobot-humble-waffle-r9r677xqwjj34gv-9090.preview.app.github.dev/users", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify(user)
+            });
 
-        fetch("https://vinnyrobot-humble-waffle-r9r677xqwjj34gv-9090.preview.app.github.dev/users", {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json"
-            },
-            body: JSON.stringify(user)
-        });
+            localStorage.setItem("name", user.name);
+            localStorage.setItem("username", user.username);
+            localStorage.setItem("login", token);
 
-        localStorage.setItem("name", user.name);
-        localStorage.setItem("username", user.username);
-        localStorage.setItem("login", token);
-
-        navigate("/");
-        window.location.reload();
+            navigate("/");
+            window.location.reload();
+        } else {
+            alert("Para criar uma nova conta, primeiro delete a atual.");
+            navigate("/")
+        }
     }
 
     return(

@@ -1,17 +1,4 @@
 {
-  "posts": [
-    {
-      "name": "João Vinny",
-      "username": "vinnyrobot",
-      "message": "Welcome to my chat",
-      "id": 1
-    }
-  ],
-  "users": [
-    {
-      "name": "João Vinny",
-      "username": "vinnyrobot",
-      "id": 1
-    }
-  ]
+  "posts": [],
+  "users": []
 }

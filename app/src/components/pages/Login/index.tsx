@@ -14,10 +14,10 @@ function Login(){
         setUser({...user, [e.target.name]: e.target.value})
     }
 
-    function handleSubmit(e: FormEvent<HTMLFormElement>){
+    async function handleSubmit(e: FormEvent<HTMLFormElement>){
         e.preventDefault();
     
-        fetch("https://vinnyrobot-humble-waffle-r9r677xqwjj34gv-9090.preview.app.github.dev/users", {
+        await fetch("https://vinnyrobot-humble-waffle-r9r677xqwjj34gv-9090.preview.app.github.dev/users", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"

@@ -9,30 +9,25 @@ function CreatePost(){
     const [post, setPost] = useState<PostData>(Object);
     const navigate = useNavigate();
 
-    if(!localStorage.getItem("login")){
-        window.location.href = "/"
-        return null;
-    }
-
-    const UserPost = {
+    const userPost = {
+        message: post.message,
         name: localStorage.getItem("name"),
-        username: localStorage.getItem("username"),
-        message: post.message
+        username: localStorage.getItem("username")
     }
 
     function handleChange(e: ChangeEvent<HTMLInputElement>){
         setPost({...post, [e.target.name]: e.target.value});
     }
 
-    function handleSubmit(e: FormEvent<HTMLFormElement>){
+    async function handleSubmit(e: FormEvent<HTMLFormElement>){
         e.preventDefault();
 
-        fetch("https://vinnyrobot-humble-waffle-r9r677xqwjj34gv-9090.preview.app.github.dev/posts",{
+        await fetch("https://vinnyrobot-humble-waffle-r9r677xqwjj34gv-9090.preview.app.github.dev/posts",{
             method: "POST",
             headers: {
                "Content-Type": "application/json"
             },
-            body: JSON.stringify(UserPost)
+            body: JSON.stringify(userPost)
         })
         navigate("/");
         window.location.reload();

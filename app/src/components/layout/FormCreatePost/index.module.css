@@ -1,0 +1,43 @@
+.form {
+    background: #fff;
+    padding: 2em 1em;
+    height: 18em;
+    width: 25em;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 7.5em;
+    border-radius: 0.6em;
+    box-shadow: 0px 0px 20px 6px rgba(0, 0, 0, 0.100);
+    transition: all 0.8s ease;
+}
+
+.form:hover {
+    box-shadow: 0px 0px 20px 10px rgba(0, 0, 0, 0.200);
+}
+
+.form .message {
+    padding: 1em 1em;
+    width: 20em;
+    margin: 0 auto;
+    background: #f0f0f0;
+    color: #333;
+    height: 4.5em;
+    font-size: 17px;
+    border: none;
+    border-radius: 0.6em;
+    outline: none;
+}
+
+.form .button{
+    background: #65FE;
+    padding: 0.8em 1em;
+    margin-top: 4.5em;
+    color: #fff;
+    font-weight: 500;
+    font-size: 17px;
+    width: 20em;
+    border-radius: 0.6em;
+    border: none;
+}

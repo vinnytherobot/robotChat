@@ -1,35 +1,4 @@
 {
-  "posts": [
-    {
-      "name": "João Vinny",
-      "username": "vinnyrobot",
-      "message": "Welcome to my chat!",
-      "id": 1
-    },
-    {
-      "name": "João Vinny",
-      "username": "vinnyrobot",
-      "message": "Hello",
-      "id": 2
-    },
-    {
-      "name": "João Vinny",
-      "username": "vinnyrobot",
-      "message": "Hello",
-      "id": 3
-    },
-    {
-      "name": "João Vinny",
-      "username": "vinnyrobot",
-      "message": "Hello",
-      "id": 4
-    }
-  ],
-  "users": [
-    {
-      "name": "João Vinny",
-      "username": "vinnyrobot",
-      "id": 1
-    }
-  ]
+  "posts": [],
+  "users": []
 }

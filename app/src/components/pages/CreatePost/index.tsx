@@ -9,10 +9,15 @@ function CreatePost(){
     const [post, setPost] = useState<PostData>(Object);
     const navigate = useNavigate();
 
+    if(!localStorage.getItem("login")){
+        window.location.href = "/";
+        return null;
+    }
+
     const userPost = {
         message: post.message,
         name: localStorage.getItem("name"),
-        username: localStorage.getItem("username")
+        username: localStorage.getItem("username")?.toLowerCase(),
     }
 
     function handleChange(e: ChangeEvent<HTMLInputElement>){

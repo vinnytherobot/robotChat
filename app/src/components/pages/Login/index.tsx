@@ -1,11 +1,11 @@
 import FormLogin from "../../layout/FormLogin";
-import { DataUser } from "../../../types/types";
+import { User } from "../../../types/types";
 
 import { FormEvent, ChangeEvent, useState } from "react"
 import { useNavigate } from "react-router-dom";
 
 function Login(){
-    const [user, setUser] = useState<DataUser>(Object);
+    const [user, setUser] = useState<User>(Object);
     const navigate = useNavigate();
 
     const token = Math.floor(Date.now() * Math.random()).toString(36);

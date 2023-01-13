@@ -5,6 +5,8 @@ import Navbar from "./components/layout/Navbar";
 import CreatePost from "./components/pages/CreatePost";
 import Home from "./components/pages/Home";
 import Login from "./components/pages/Login";
+import Profile from "./components/pages/Profile";
+import SearchProfile from "./components/pages/SearchProfile";
 
 function App() {
   return (
@@ -14,6 +16,8 @@ function App() {
         <Route path="/" element={<Home/>}></Route>
         <Route path="/login" element={<Login/>}></Route>
         <Route path="/createpost" element={<CreatePost/>}></Route>
+        <Route path="/search" element={<SearchProfile/>}></Route>
+        <Route path="/profile/:id" element={<Profile/>}></Route>
       </Routes>
     </Router>
   );

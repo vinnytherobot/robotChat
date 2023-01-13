@@ -7,9 +7,10 @@ export type PostData = {
     id: string;
 }
 
-export type DataUser = {
+export type User = {
     name: string;
     username: string;
+    id: string;
 }
 
 export type DataForm = {

@@ -5,6 +5,18 @@
       "name": "João Vinny",
       "username": "vinnyrobot",
       "id": 1
+    },
+    {
+      "message": "Teste 1",
+      "name": "Teste de desenvolvimento",
+      "username": "robot",
+      "id": 2
+    },
+    {
+      "message": "Teste 2",
+      "name": "João Vinny",
+      "username": "vinnyrobot",
+      "id": 3
     }
   ],
   "users": [
@@ -12,6 +24,11 @@
       "name": "João Vinny",
       "username": "vinnyrobot",
       "id": 1
+    },
+    {
+      "name": "Teste de desenvolvimento",
+      "username": "robot",
+      "id": 2
     }
   ]
 }

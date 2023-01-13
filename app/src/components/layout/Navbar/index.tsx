@@ -7,13 +7,7 @@ import { useState } from "react";
 function Navbar(){
 
     const [showNavbarResponsive, setShowNavbarResponsive] = useState(false);
-
-    function logOut(){
-        localStorage.clear();
-        alert("Você deletou sua conta");
-        window.location.reload();
-    }
-
+    
     function handleShowNavbarResposive(){
         setShowNavbarResponsive(showNavbarResponsive ? false : true);
     }
@@ -34,8 +28,8 @@ function Navbar(){
                                 <li className={styles.link}>
                                     <Link to="/createpost">Create Post</Link>
                                 </li>
-                                <li className={styles.link} onClick={logOut}>
-                                    <Link to="/login">Log Out</Link>
+                                <li className={styles.link}>
+                                    <Link to="/search">Search</Link>
                                 </li>
                             </>
                         ): (
@@ -45,6 +39,9 @@ function Navbar(){
                                 </li>
                                 <li className={styles.link}>
                                     <Link to="/login">Login</Link>
+                                </li>
+                                <li className={styles.link}>
+                                    <Link to="/search"></Link>
                                 </li>
                             </>
                         )}
@@ -63,8 +60,8 @@ function Navbar(){
                                 <li className={styles.link}>
                                     <Link to="/createpost">Create Post</Link>
                                 </li>
-                                <li className={styles.link} onClick={logOut}>
-                                    <Link to="/login">Log Out</Link>
+                                <li className={styles.link}>
+                                    <Link to="/search">Search</Link>
                                 </li>
                             </>
                         ) : (
@@ -74,6 +71,9 @@ function Navbar(){
                                 </li>
                                 <li className={styles.link}>
                                     <Link to="/login">Login</Link>
+                                </li>
+                                <li className={styles.link}>
+                                    <Link to="/search">Search</Link>
                                 </li>
                             </>
                         )}

@@ -43,7 +43,8 @@
 }
 
 .containerPosts .post hr {
-    background: #DDD;
+    background: #f0f0f0;
+    border: 1px solid #f0f0f0;
 }
 
 .errorMessage {

@@ -1,8 +1,12 @@
 import { ChangeEvent, useEffect, useState } from "react";
-import { User } from "../../../types/types";
+import { FaUserCircle } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
+import { User } from "../../../types/types";
+import styles from "./index.module.css";
 
 function SearchProfile(){
+
     const [search, setSearch] = useState("");
     const [profiles, setProfiles] = useState<User[]>([]);
 
@@ -23,18 +27,28 @@ function SearchProfile(){
     }
 
     return(
-        <section>
+        <section className={styles.searchContainer}>
             <input
-                type="text" 
+                type="search" 
                 name="profile" 
                 onChange={handleChange} 
                 placeholder="Search..."
             />
-            <div>
-                {filteredRepositorys.map((profile) => (
-                    <h1>{profile.name} | {profile.username}</h1>
-                ))}
-            </div>
+            {filteredRepositorys.map((profile) => (
+                <Link to={`/profile/${profile.id}`}>
+                    <div className={styles.profile}>
+                        <FaUserCircle size={45}/>
+                        <ul>
+                            <li>
+                                <span className={styles.name}>{profile.name}</span>
+                            </li>
+                            <li>
+                                <span className={styles.username}>{profile.username}</span>
+                            </li>
+                        </ul>
+                    </div>
+                </Link>
+            ))}
         </section>
     )
 }

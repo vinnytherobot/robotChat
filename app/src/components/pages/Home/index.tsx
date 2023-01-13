@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { FaUserCircle } from "react-icons/fa";
 
-import { useDelay } from "../../../hooks/useDelay";
+import useDelay from "../../../hooks/useDelay";
 import { PostData } from "../../../types/types";
 import Loading from "../../layout/Loading";
 
@@ -9,10 +9,11 @@ import styles from "./index.module.css";
 
 function Home(){
     const [posts, setPosts] = useState<PostData[]>([])
+    const delay = useDelay;
 
     useEffect(() => {
         async function getPosts(){
-            await useDelay(1500)
+            await delay(1500);
             const response = await fetch("https://vinnyrobot-humble-waffle-r9r677xqwjj34gv-9090.preview.app.github.dev/posts");
             const data = await response.json();
             setPosts(data)

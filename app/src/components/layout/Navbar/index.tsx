@@ -41,7 +41,7 @@ function Navbar(){
                                     <Link to="/login">Login</Link>
                                 </li>
                                 <li className={styles.link}>
-                                    <Link to="/search"></Link>
+                                    <Link to="/search">Search</Link>
                                 </li>
                             </>
                         )}

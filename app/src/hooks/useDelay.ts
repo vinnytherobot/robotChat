@@ -1,3 +1,5 @@
-export const useDelay = async (ms: number) => new Promise(
+const useDelay = async (ms: number) => new Promise(
     resolve => setTimeout(resolve, ms)
 );  
+
+export default useDelay;

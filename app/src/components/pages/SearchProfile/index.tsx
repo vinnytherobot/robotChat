@@ -1,8 +1,9 @@
 import { ChangeEvent, useEffect, useState } from "react";
 import { FaUserCircle } from "react-icons/fa";
 import { Link } from "react-router-dom";
-import useDelay from "../../../hooks/useDelay";
+import Loading from "../../layout/Loading";
 
+import useDelay from "../../../hooks/useDelay";
 import { User } from "../../../types/types";
 import styles from "./index.module.css";
 
@@ -14,7 +15,7 @@ function SearchProfile(){
 
     useEffect(() => {
         async function getProfiles(){
-            await delay(800);
+            await delay(1000)
             const response = await fetch("https://vinnyrobot-humble-waffle-r9r677xqwjj34gv-9090.preview.app.github.dev/users");
             const data = await response.json();
             setProfiles(data);
@@ -22,7 +23,7 @@ function SearchProfile(){
         getProfiles();
     }, [])
 
-    const filteredRepositorys = search.length > 0 ?
+    const filteredProfiles = search.length > 0 ?
          profiles.filter(profile => profile.username.includes(search)) : [];
 
     function handleChange(e: ChangeEvent<HTMLInputElement>){
@@ -37,7 +38,7 @@ function SearchProfile(){
                 onChange={handleChange} 
                 placeholder="Search..."
             />
-            {filteredRepositorys.map((profile) => (
+            {filteredProfiles.map((profile) => (
                 <Link to={`/profile/${profile.id}`}>
                     <div className={styles.profile}>
                         <FaUserCircle size={45}/>

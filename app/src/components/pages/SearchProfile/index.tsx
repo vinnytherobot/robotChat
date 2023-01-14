@@ -1,6 +1,7 @@
 import { ChangeEvent, useEffect, useState } from "react";
 import { FaUserCircle } from "react-icons/fa";
 import { Link } from "react-router-dom";
+import useDelay from "../../../hooks/useDelay";
 
 import { User } from "../../../types/types";
 import styles from "./index.module.css";
@@ -9,9 +10,11 @@ function SearchProfile(){
 
     const [search, setSearch] = useState("");
     const [profiles, setProfiles] = useState<User[]>([]);
+    const delay = useDelay;
 
     useEffect(() => {
         async function getProfiles(){
+            await delay(800);
             const response = await fetch("https://vinnyrobot-humble-waffle-r9r677xqwjj34gv-9090.preview.app.github.dev/users");
             const data = await response.json();
             setProfiles(data);

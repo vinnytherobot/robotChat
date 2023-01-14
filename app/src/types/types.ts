@@ -12,6 +12,7 @@ export type User = {
     name: string;
     username: string;
     id: string;
+    description: string;
 }
 
 export type DataForm = {

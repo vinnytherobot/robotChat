@@ -31,9 +31,11 @@ function Profile(){
         <> 
             {removeLoading && (
                 <section className={styles.userCard}>
-                        <FaUserCircle size={150} />
-                        <h2>{profile.name} @{profile.username}</h2>
-                    </section>
+                    <h2>{profile.name}</h2>
+                    <FaUserCircle size={150} />
+                    <span className={styles.description}>{profile.description}</span>
+                    <h2 className={styles.username}>@{profile.username}</h2>
+                </section>
             )}
             {!removeLoading && <Loading/>}
         </>

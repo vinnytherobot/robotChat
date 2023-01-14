@@ -13,12 +13,16 @@ function MyProfile(){
         setRemoveLoading(true);
     }, 2000);
 
+
+
     return(
         <>
             {removeLoading && (
                 <section className={styles.userCard}>
+                    <h2 className={styles.name}>{localStorage.getItem("name")}</h2>
                     <FaUserCircle size={150}/>
-                    <h2>{localStorage.getItem("name")} @{localStorage.getItem("username")}</h2>
+                    <span className={styles.description}></span>
+                    <h2 className={styles.username}>@{localStorage.getItem("username")}</h2>
                 </section>
             )}
             {!removeLoading && <Loading/>}

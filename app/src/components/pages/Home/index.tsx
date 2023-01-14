@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { FaRegHeart, FaUserCircle } from "react-icons/fa";
+import { FaUserCircle } from "react-icons/fa";
 
 import useDelay from "../../../hooks/useDelay";
 import { PostData } from "../../../types/types";

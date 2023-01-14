@@ -1,17 +1,45 @@
 .userCard {
+    display: grid;
     background: #65FE;
     color: #FFF;
     padding: 1em 2em;
-    width: 20em;
-    height: 20em;
+    width: 35em;
+    height: 15em;
     border-radius: 0.6em;
-    justify-content: center;
-    align-items: center;
     margin: 0 auto;
-    margin-top: 3.5em;
-    text-align: center;
+    margin-top: 7.5em;
+    grid-template-columns: 18em 11em;
+    grid-template-rows: 2em 10em;
+    gap: 2em;
 }
 
-.userCard svg {
-    margin-bottom: 2em;
+
+.userCard .description {
+    text-align: justify;
+}
+
+.userCard .username {
+    margin-top: 5em;
+}
+
+@media (max-width: 720px){
+    .userCard {
+        width: 25em;
+        height: 30em;
+        grid-template-columns: 20em;
+        grid-template-rows: 2em 8em 3em 1em;
+        gap: 3.5em;
+    }
+
+    .userCard .name {
+        margin: 0 auto;
+    }
+
+    .userCard svg {
+        margin: 0 auto;
+    }
+
+    .userCard .username {
+        margin: 0 auto;
+    }
 }

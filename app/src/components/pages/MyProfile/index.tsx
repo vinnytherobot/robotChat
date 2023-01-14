@@ -9,6 +9,10 @@ import styles from "./index.module.css";
 function MyProfile(){
     const [removeLoading, setRemoveLoading] = useState(false);
 
+    if(!localStorage.getItem("login")){
+        window.location.href = "/";
+    }
+
     setTimeout(() => {
         setRemoveLoading(true);
     }, 2000);

@@ -4,7 +4,8 @@ export type PostData = {
     name: string;
     username: string;
     message: string;
-    id: string;
+    id: number;
+    likes: number;
 }
 
 export type User = {

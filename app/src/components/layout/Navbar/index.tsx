@@ -1,15 +1,18 @@
 import styles from "./index.module.css";
 
 import { Link } from "react-router-dom";
-import { FaBars } from "react-icons/fa";
+import { FaCaretDown, FaUserCircle} from "react-icons/fa";
 import { useState } from "react";
 
 function Navbar(){
+    const [showExtraMenu, setShowExtraMenu] = useState(false)
 
-    const [showNavbarResponsive, setShowNavbarResponsive] = useState(false);
-    
-    function handleShowNavbarResposive(){
-        setShowNavbarResponsive(showNavbarResponsive ? false : true);
+    function clearLocalStorage(){
+        localStorage.clear();
+    }
+
+    function handleShowExtraMenu(){
+        setShowExtraMenu(showExtraMenu ? false : true);
     }
 
     return(
@@ -47,39 +50,49 @@ function Navbar(){
                         )}
                     </ul>
                 </nav>
-                <FaBars size={30} onClick={handleShowNavbarResposive}/>
+                <div>
+                    <FaCaretDown size={25} onClick={handleShowExtraMenu}/>
+                    {localStorage.getItem("login") && (
+                        <Link to="/myprofile">
+                            <FaUserCircle size={45} color="#65FE"/>
+                        </Link>
+                    )}
+                </div>
             </header>
-            <section className={showNavbarResponsive ? styles.responsiveNavbar : styles.closeResponsiveNavbar}>
-                <nav>
-                    <ul className={styles.links}>
-                        {localStorage.getItem("login") ? (
-                            <>
-                                <li className={styles.link}>
-                                    <Link to="/">Home</Link>
-                                </li>
-                                <li className={styles.link}>
-                                    <Link to="/createpost">Create Post</Link>
-                                </li>
-                                <li className={styles.link}>
-                                    <Link to="/search">Search</Link>
-                                </li>
-                            </>
-                        ) : (
-                            <>
-                                <li className={styles.link}>
-                                    <Link to="/">Home</Link>
-                                </li>
-                                <li className={styles.link}>
-                                    <Link to="/login">Login</Link>
-                                </li>
-                                <li className={styles.link}>
-                                    <Link to="/search">Search</Link>
-                                </li>
-                            </>
-                        )}
-                    </ul>
-                </nav>
-            </section>
+            <div className={showExtraMenu ? styles.showExtraMenu : styles.closeExtraMenu}>
+                {localStorage.getItem("login") ? (
+                    <nav>
+                        <ul className={styles.links}>
+                            <li className={styles.link}>
+                                <Link to="/myprofile">My Profile</Link>
+                            </li>
+                            <li className={styles.link} onClick={clearLocalStorage}>
+                                <Link to="/">Log Out</Link>
+                            </li>
+                            <li className={styles.link}>
+                                <Link to="/createpost">Create Post</Link>
+                            </li>
+                            <li className={styles.link}>
+                                <Link to="/">Home</Link>
+                            </li>
+                            <li className={styles.link}>
+                                <Link to="/search">Search</Link>
+                            </li>
+                        </ul>
+                    </nav>
+                ) : (
+                    <nav>
+                        <ul className={styles.links}>
+                            <li className={styles.link}>
+                                <Link to="/">Home</Link>
+                            </li>
+                            <li className={styles.link}>
+                                <Link to="/login">Login</Link>
+                            </li>
+                        </ul>
+                    </nav>
+                )}
+            </div>
         </>
     )
 }

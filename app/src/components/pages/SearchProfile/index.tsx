@@ -1,7 +1,6 @@
 import { ChangeEvent, useEffect, useState } from "react";
 import { FaUserCircle } from "react-icons/fa";
 import { Link } from "react-router-dom";
-import Loading from "../../layout/Loading";
 
 import useDelay from "../../../hooks/useDelay";
 import { User } from "../../../types/types";

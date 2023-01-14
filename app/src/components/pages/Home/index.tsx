@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { FaUserCircle } from "react-icons/fa";
+import { FaRegHeart, FaUserCircle } from "react-icons/fa";
 
 import useDelay from "../../../hooks/useDelay";
 import { PostData } from "../../../types/types";
@@ -8,7 +8,7 @@ import Loading from "../../layout/Loading";
 import styles from "./index.module.css";
 
 function Home(){
-    const [posts, setPosts] = useState<PostData[]>([])
+    const [posts, setPosts] = useState<PostData[]>([]);
     const delay = useDelay;
 
     useEffect(() => {

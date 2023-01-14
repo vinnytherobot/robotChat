@@ -1,0 +1,17 @@
+.userCard {
+    background: #65FE;
+    color: #FFF;
+    padding: 1em 2em;
+    width: 20em;
+    height: 20em;
+    border-radius: 0.6em;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    margin-top: 3.5em;
+    text-align: center;
+}
+
+.userCard svg {
+    margin-bottom: 2em;
+}

@@ -1,9 +1,12 @@
 import { useEffect, useState } from "react";
+import { FaUserCheck, FaUserCircle } from "react-icons/fa";
 import { useParams } from "react-router-dom";
 
 import useDelay from "../../../hooks/useDelay";
 import { User } from "../../../types/types";
 import Loading from "../../layout/Loading";
+
+import styles from "./index.module.css";
 
 
 function Profile(){
@@ -26,9 +29,12 @@ function Profile(){
 
     return(
         <> 
-            <section>
-                {removeLoading && <h1>{profile.name}</h1>}
-            </section>
+            {removeLoading && (
+                <section className={styles.userCard}>
+                        <FaUserCircle size={150} />
+                        <h2>{profile.name} @{profile.username}</h2>
+                    </section>
+            )}
             {!removeLoading && <Loading/>}
         </>
     )

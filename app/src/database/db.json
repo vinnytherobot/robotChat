@@ -1,7 +1,7 @@
 {
   "posts": [
     {
-      "message": "Hello World!",
+      "message": "Welcome to my chat!",
       "name": "João Vinny",
       "username": "vinnyrobot",
       "id": 1
@@ -11,7 +11,7 @@
     {
       "name": "João Vinny",
       "username": "vinnyrobot",
-      "description": "Criador do atual chat no qual você está usando!",
+      "description": "Criador do chat que você está usando.",
       "id": 1
     }
   ]

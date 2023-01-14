@@ -9,6 +9,7 @@ function Navbar(){
 
     function clearLocalStorage(){
         localStorage.clear();
+        window.location.reload();
     }
 
     function handleShowExtraMenu(){

@@ -90,6 +90,9 @@ function Navbar(){
                             <li className={styles.link}>
                                 <Link to="/login">Login</Link>
                             </li>
+                            <li className={styles.link}>
+                                <Link to="/search">Search</Link>
+                            </li>
                         </ul>
                     </nav>
                 )}

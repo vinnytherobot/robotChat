@@ -1,13 +1,13 @@
 .form {
     background: #fff;
     padding: 1em;
-    height: 18em;
+    height: 22em;
     width: 25em;
     justify-content: center;
     align-items: center;
     text-align: center;
     margin: 0 auto;
-    margin-top: 7.5em;
+    margin-top: 5.5em;
     border-radius: 0.6em;
     box-shadow: 0px 0px 20px 6px rgba(0, 0, 0, 0.100);
     transition: all 0.8s ease;
@@ -51,7 +51,7 @@
 @media (max-width: 720px){
     .form {
         width: 24em;
-        height: 18em;
+        height: 22em;
         margin-top: 17em;
     }
 

@@ -13,6 +13,11 @@
       "username": "vinnyrobot",
       "description": "Criador do chat que você está usando.",
       "id": 1
+    },
+    {
+      "name": "Matheus",
+      "username": "123",
+      "id": 2
     }
   ]
 }

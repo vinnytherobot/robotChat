@@ -27,6 +27,7 @@ function Login(){
 
         localStorage.setItem("name", user.name);
         localStorage.setItem("username", user.username);
+        localStorage.setItem("description", user.description);
         localStorage.setItem("login", token);
 
         navigate("/");

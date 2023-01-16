@@ -25,7 +25,7 @@ function MyProfile(){
                 <section className={styles.userCard}>
                     <h2 className={styles.name}>{localStorage.getItem("name")}</h2>
                     <FaUserCircle size={150}/>
-                    <span className={styles.description}></span>
+                    <span className={styles.description}>{localStorage.getItem("description")}</span>
                     <h2 className={styles.username}>@{localStorage.getItem("username")}</h2>
                 </section>
             )}

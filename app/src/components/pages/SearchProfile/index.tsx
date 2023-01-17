@@ -22,7 +22,7 @@ function SearchProfile(){
         getProfiles();
     }, [])
 
-    const filteredProfiles = search.length > 0 ?
+    const filteredProfiles = search.toLowerCase().length > 0 ?
          profiles.filter(profile => profile.username.includes(search)) : [];
 
     function handleChange(e: ChangeEvent<HTMLInputElement>){

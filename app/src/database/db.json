@@ -11,12 +11,13 @@
     {
       "name": "João Vinny",
       "username": "vinnyrobot",
-      "description": "Criador do chat que você está usando.",
+      "description": "Criador do chat que você esta usando!",
       "id": 1
     },
     {
       "name": "Matheus",
       "username": "123",
+      "description": null,
       "id": 2
     }
   ]

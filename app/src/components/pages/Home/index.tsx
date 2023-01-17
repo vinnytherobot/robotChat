@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
-import { FaUserCircle } from "react-icons/fa";
+import { FaUserCircle, FaEdit } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 import useDelay from "../../../hooks/useDelay";
 import { PostData } from "../../../types/types";
@@ -35,6 +36,11 @@ function Home(){
                                 <span className={styles.username}>@{post.username}</span>
                             </header>
                             <div className={styles.message}>{post.message}</div>
+                            {localStorage.getItem("name") === post.name && (
+                                <Link to={`/editpost/${post.id}`}>
+                                    <FaEdit>Edit post</FaEdit>
+                                </Link>
+                            )}
                             <hr></hr>
                         </div>
                     ))}

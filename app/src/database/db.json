@@ -1,10 +1,28 @@
 {
   "posts": [
     {
-      "message": "Welcome to my chat!",
+      "message": "Teste",
       "name": "João Vinny",
       "username": "vinnyrobot",
       "id": 1
+    },
+    {
+      "message": "I am brazilian",
+      "name": "João Vinny",
+      "username": "vinnyrobot",
+      "id": 2
+    },
+    {
+      "message": "All right",
+      "name": "João Vinny",
+      "username": "vinnyrobot",
+      "id": 3
+    },
+    {
+      "message": "I'm programmer and creator of this site.",
+      "name": "João Vinny",
+      "username": "vinnyrobot",
+      "id": 4
     }
   ],
   "users": [

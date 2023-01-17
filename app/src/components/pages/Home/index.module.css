@@ -47,8 +47,8 @@
     border: 1px solid #f0f0f0;
 }
 
-.errorMessage {
-    text-align: center;
+.containerPosts .post a {
+    color: #65FE;
 }
 
 @media (max-width: 1200px){

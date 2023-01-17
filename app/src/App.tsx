@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Navbar from "./components/layout/Navbar";
 
 import CreatePost from "./components/pages/CreatePost";
+import EditPost from "./components/pages/EditPost";
 import Home from "./components/pages/Home";
 import Login from "./components/pages/Login";
 import MyProfile from "./components/pages/MyProfile";
@@ -20,6 +21,7 @@ function App() {
         <Route path="/search" element={<SearchProfile/>}></Route>
         <Route path="/myprofile" element={<MyProfile/>}></Route>
         <Route path="/profile/:id" element={<Profile/>}></Route>
+        <Route path="/editpost/:id" element={<EditPost/>}></Route>
       </Routes>
     </Router>
   );

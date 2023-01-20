@@ -46,7 +46,7 @@ function SearchProfile(){
                                 <span className={styles.name}>{profile.name}</span>
                             </li>
                             <li>
-                                <span className={styles.username}>{profile.username}</span>
+                                <span className={styles.username}>{profile.username.toLowerCase()}</span>
                             </li>
                         </ul>
                     </div>

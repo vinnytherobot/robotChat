@@ -1,15 +1,21 @@
 import { useState, FormEvent, ChangeEvent } from "react";
 import { useNavigate, useParams } from "react-router-dom";
+import useDelay from "../../../hooks/useDelay";
 
 import { PostData } from "../../../types/types";
 import FormEditPost from "../../layout/FormEditPost";
+import SucessMessage from "../../layout/SucessMessage";
 
 
 function EditPost(){
     const [newMessage, setNewMessage] = useState("");
     const [post, setPost] = useState<PostData>(Object);
+    const [clicked, setClicked] = useState(false);
+
     const navigate = useNavigate();
     const { id } = useParams();
+
+    const delay = useDelay;
 
     function handleChange(e: ChangeEvent<HTMLInputElement>){
         setNewMessage(e.target.value);
@@ -35,12 +41,19 @@ function EditPost(){
             },
             body: JSON.stringify(updatedPost)
         })
+        
+        setClicked(true);
+
+        await delay(1500);
 
         navigate("/");
     }
 
     return(
-        <FormEditPost handleSubmit={handleSubmit} handleChange={handleChange}/>
+        <>
+            {clicked && <SucessMessage message="Mensagem modificada!" />}
+            <FormEditPost handleSubmit={handleSubmit} handleChange={handleChange}/>
+        </>
     )
 }
 

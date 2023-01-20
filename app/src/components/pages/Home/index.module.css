@@ -39,7 +39,7 @@
 .containerPosts .post .message {
     font-weight: 500;
     text-align: justify;
-    margin-bottom: 0.5em;
+    margin-bottom: 0.8em;
 }
 
 .containerPosts .post hr {
@@ -48,6 +48,11 @@
 }
 
 .containerPosts .post a {
+    color: #65FE;
+    margin-right: 2em;
+}
+
+.containerPosts .post svg, .containerPosts .post .delete{
     color: #65FE;
 }
 

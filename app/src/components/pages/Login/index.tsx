@@ -4,9 +4,15 @@ import { User } from "../../../types/types";
 import { FormEvent, ChangeEvent, useState } from "react"
 import { useNavigate } from "react-router-dom";
 
+import useDelay from "../../../hooks/useDelay";
+import SucessMessage from "../../layout/SucessMessage";
+
 function Login(){
     const [user, setUser] = useState<User>(Object);
+    const [clicked, setClicked] = useState(false);
     const navigate = useNavigate();
+
+    const delay = useDelay;
 
     const token = Math.floor(Date.now() * Math.random()).toString(36);
 
@@ -16,26 +22,39 @@ function Login(){
 
     async function handleSubmit(e: FormEvent<HTMLFormElement>){
         e.preventDefault();
+
+        const ObjectUser = {
+            name: user.name,
+            username: user.username.toLowerCase(),
+            description: user.description
+        }
     
         await fetch("https://vinnyrobot-humble-waffle-r9r677xqwjj34gv-9090.preview.app.github.dev/users", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
             },
-            body: JSON.stringify(user)
+            body: JSON.stringify(ObjectUser)
         });
 
-        localStorage.setItem("name", user.name);
-        localStorage.setItem("username", user.username);
-        localStorage.setItem("description", user.description);
+        localStorage.setItem("name", ObjectUser.name);
+        localStorage.setItem("username", ObjectUser.username);
+        localStorage.setItem("description", ObjectUser.description);
         localStorage.setItem("login", token);
 
-        navigate("/");
+        setClicked(true);
+
+        await delay(1500);
+
+        navigate("/myprofile");
         window.location.reload();
     }
 
     return(
-        <FormLogin handleSubmit={handleSubmit} handleChange={handleChange}/>
+        <>
+            {clicked && <SucessMessage message="Sua conta foi criada!" />}
+            <FormLogin handleSubmit={handleSubmit} handleChange={handleChange}/>
+        </>
     )
 }
 

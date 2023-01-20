@@ -18,3 +18,7 @@ export type DataForm = {
     handleSubmit: FormEventHandler;
     handleChange: ChangeEventHandler;
 }
+
+export type Message = {
+    message: string;
+}

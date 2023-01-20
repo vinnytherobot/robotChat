@@ -1,0 +1,16 @@
+.messageContainer {
+    background: lightGreen;
+    padding: 0.5em 1em;
+    width: 25em;
+    height: 6em;
+    margin: 2em auto;
+    display: flex;
+    border-radius: 0.6em;
+}
+
+.messageContainer .message {
+    color: green;
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+}

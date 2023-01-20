@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { FaUserCircle, FaEdit } from "react-icons/fa";
+import { FaUserCircle, FaPencilAlt, FaTrash } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
 import useDelay from "../../../hooks/useDelay";
@@ -11,6 +11,18 @@ import styles from "./index.module.css";
 function Home(){
     const [posts, setPosts] = useState<PostData[]>([]);
     const delay = useDelay;
+
+    async function deletePost(id: number){
+        await fetch(`https://vinnyrobot-humble-waffle-r9r677xqwjj34gv-9090.preview.app.github.dev/posts/${id}`, {
+            method: "DELETE",
+            headers: {
+                "Content-Type": "application/json"
+            }
+        })
+
+        alert("Post deletado com sucesso!");
+        window.location.reload();
+    }
 
     useEffect(() => {
         async function getPosts(){
@@ -37,9 +49,12 @@ function Home(){
                             </header>
                             <div className={styles.message}>{post.message}</div>
                             {localStorage.getItem("name") === post.name && (
-                                <Link to={`/editpost/${post.id}`}>
-                                    <FaEdit>Edit post</FaEdit>
-                                </Link>
+                                <>
+                                    <Link to={`/editpost/${post.id}`}>
+                                        <FaPencilAlt/>Editar Post
+                                    </Link>
+                                    <FaTrash onClick={() => deletePost(post.id)}/><span className={styles.delete}>Excluir Post</span>
+                                </>
                             )}
                             <hr></hr>
                         </div>

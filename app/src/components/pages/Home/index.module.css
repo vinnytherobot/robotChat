@@ -47,13 +47,14 @@
     border: 1px solid #f0f0f0;
 }
 
-.containerPosts .post a {
+.containerPosts .post .footer a {
     color: #65FE;
     margin-right: 2em;
 }
 
-.containerPosts .post svg, .containerPosts .post .delete{
+.containerPosts .post .footer svg, .containerPosts .post .footer .delete{
     color: #65FE;
+    font-weight: 500;
 }
 
 @media (max-width: 1200px){

@@ -49,12 +49,12 @@ function Home(){
                             </header>
                             <div className={styles.message}>{post.message}</div>
                             {localStorage.getItem("name") === post.name && (
-                                <>
+                                <footer className={styles.footer}>
                                     <Link to={`/editpost/${post.id}`}>
                                         <FaPencilAlt/>Editar Post
                                     </Link>
                                     <FaTrash onClick={() => deletePost(post.id)}/><span className={styles.delete}>Excluir Post</span>
-                                </>
+                                </footer>
                             )}
                             <hr></hr>
                         </div>

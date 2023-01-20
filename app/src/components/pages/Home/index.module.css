@@ -52,7 +52,7 @@
     margin-right: 2em;
 }
 
-.containerPosts .post .footer svg, .containerPosts .post .footer .delete{
+.containerPosts .post .footer a, .containerPosts .post .footer .delete{
     color: #65FE;
     font-weight: 500;
 }

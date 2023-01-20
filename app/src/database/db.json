@@ -5,12 +5,6 @@
       "name": "João Vinny",
       "username": "vinnyrobot",
       "id": 1
-    },
-    {
-      "message": "Nsnsms",
-      "name": "Enviroment Test 2",
-      "username": "testerobot 2",
-      "id": 2
     }
   ],
   "users": [
@@ -25,30 +19,6 @@
       "username": "123",
       "description": null,
       "id": 2
-    },
-    {
-      "name": "Enviroment Test",
-      "username": "Robot123",
-      "description": "Test account.",
-      "id": 3
-    },
-    {
-      "name": "Enviroment Test 2",
-      "username": "testerobot 2",
-      "description": "Test account.",
-      "id": 4
-    },
-    {
-      "name": "Nsns",
-      "username": "nsms",
-      "description": "Nsnsnx",
-      "id": 5
-    },
-    {
-      "name": "Jsjsssnsnsns",
-      "username": "ndjddmd",
-      "description": "Djdjdjdmx",
-      "id": 6
     }
   ]
 }

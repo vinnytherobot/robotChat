@@ -32,7 +32,7 @@ function CreatePost(){
     async function handleSubmit(e: FormEvent<HTMLFormElement>){
         e.preventDefault();
 
-        await fetch("https://vinnyrobot-humble-waffle-r9r677xqwjj34gv-9090.preview.app.github.dev/posts",{
+        await fetch("https://my-json-server.typicode.com/vinnyrobot/api/posts",{
             method: "POST",
             headers: {
                "Content-Type": "application/json"

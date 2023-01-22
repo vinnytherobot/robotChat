@@ -29,7 +29,7 @@ function Home(){
             await delay(1500);
             const response = await fetch("https://vinnyrobot-humble-waffle-r9r677xqwjj34gv-9090.preview.app.github.dev/posts");
             const data = await response.json();
-            setPosts(data)
+            setPosts(data);
         }
         getPosts();
     }, [])

@@ -29,7 +29,7 @@ function Login(){
             description: user.description
         }
     
-        await fetch("https://vinnyrobot-humble-waffle-r9r677xqwjj34gv-9090.preview.app.github.dev/users", {
+        await fetch("https:api-social-network.vercel.app/users", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"

@@ -13,7 +13,7 @@ function Home(){
     const delay = useDelay;
 
     async function deletePost(id: number){
-        await fetch(`https://vinnyrobot-humble-waffle-r9r677xqwjj34gv-9090.preview.app.github.dev/posts/${id}`, {
+        await fetch(`https://api-social-network.vercel.app/posts/${id}`, {
             method: "DELETE",
             headers: {
                 "Content-Type": "application/json"
@@ -27,7 +27,7 @@ function Home(){
     useEffect(() => {
         async function getPosts(){
             await delay(1500);
-            const response = await fetch("https://vinnyrobot-humble-waffle-r9r677xqwjj34gv-9090.preview.app.github.dev/posts");
+            const response = await fetch("https://api-social-network.vercel.app/posts");
             const data = await response.json();
             setPosts(data);
         }

@@ -24,7 +24,7 @@ function EditPost(){
     async function handleSubmit(e: FormEvent<HTMLFormElement>){
         e.preventDefault();
 
-        const response = await fetch(`https://vinnyrobot-humble-waffle-r9r677xqwjj34gv-9090.preview.app.github.dev/posts/${id}`);
+        const response = await fetch(`https://api-social-network.vercel.app/posts/${id}`);
         const data = await response.json();
         setPost(data);
 
@@ -34,7 +34,7 @@ function EditPost(){
             username: post.username
         }
         
-        await fetch(`https://vinnyrobot-humble-waffle-r9r677xqwjj34gv-9090.preview.app.github.dev/posts/${id}`,{
+        await fetch(`https://api-social-network.vercel.app/posts/${id}`,{
             method: "PATCH",
             headers: {
                 "Content-Type": "application/json"

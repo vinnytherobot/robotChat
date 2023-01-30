@@ -15,7 +15,7 @@ function SearchProfile(){
     useEffect(() => {
         async function getProfiles(){
             await delay(1000)
-            const response = await fetch("https://vinnyrobot-humble-waffle-r9r677xqwjj34gv-9090.preview.app.github.dev/users");
+            const response = await fetch("https://api-social-network.vercel.app/users");
             const data = await response.json();
             setProfiles(data);
         }

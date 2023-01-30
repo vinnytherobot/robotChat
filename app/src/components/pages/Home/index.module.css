@@ -74,17 +74,20 @@
 @media (max-width: 720px){
     .containerPosts {
         width: calc(55em / 1.5);
+        height: 29.5em;
     }
 }
 
 @media (max-width: 610px){
     .containerPosts {
         width: calc(55em / 2.2);
+        height: 27.5em;
     }
 }
 
 @media (max-width: 490px){
     .containerPosts {
         width: calc(55em / 2.5)
+        height: 25.5em;
     }
 }

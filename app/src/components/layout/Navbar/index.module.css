@@ -30,6 +30,7 @@
 .navbar .links .link {
     list-style: none;
     margin-left: 3em;
+    user-selected: none;
 }
 
 .navbar .links .link a {

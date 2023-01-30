@@ -41,6 +41,7 @@
     padding: 0.3em 1em;
     border-radius: 1em;
     cursor: pointer;
+    user-selected: none;
     transition: all 0.8s ease;
 }
 

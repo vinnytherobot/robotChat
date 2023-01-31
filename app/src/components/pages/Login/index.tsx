@@ -29,7 +29,7 @@ function Login(){
             description: user.description
         }
 
-        await fetch("https:api-social-network.vercel.app/users", {
+        await fetch("https://api-social-network.vercel.app/users", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"

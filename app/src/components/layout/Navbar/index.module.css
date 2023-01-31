@@ -30,18 +30,18 @@
 .navbar .links .link {
     list-style: none;
     margin-left: 3em;
-    user-selected: none;
+    user-select: none;
 }
 
 .navbar .links .link a {
     text-decoration: none;
     color: #707070;
-    font-size: 20px;
+    font-size: 18px;
     font-weight: 600;
     padding: 0.3em 1em;
     border-radius: 1em;
     cursor: pointer;
-    user-selected: none;
+    user-select: none;
     transition: all 0.8s ease;
 }
 

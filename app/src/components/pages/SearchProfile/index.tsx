@@ -24,7 +24,7 @@ function SearchProfile(){
     }, [])
 
     const filteredProfiles = search.length > 0 ?
-         profiles.filter(profile => profile.username.includes(search.toLowerCase())) : [];
+        profiles.filter(profile => profile.username.includes(search.toLowerCase())) : [];
 
     function handleChange(e: ChangeEvent<HTMLInputElement>){
         setSearch(e.target.value);

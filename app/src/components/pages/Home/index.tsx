@@ -48,12 +48,16 @@ function Home(){
                                 <span className={styles.username}>@{post.username}</span>
                             </header>
                             <div className={styles.message}>{post.message}</div>
-                            {localStorage.getItem("name") === post.name && (
+                            {localStorage.getItem("name") === post.name && localStorage.getItem("username") === post.username &&(
                                 <footer className={styles.footer}>
                                     <Link to={`/editpost/${post.id}`}>
-                                        <FaPencilAlt/>Editar Post
+                                        <FaPencilAlt/>
+                                        <span>Editar Post</span>
                                     </Link>
-                                    <FaTrash onClick={() => deletePost(post.id)}/><span className={styles.delete}>Excluir Post</span>
+                                    <Link to="/" onClick={() => deletePost(post.id)}>
+                                        <FaTrash/>
+                                        <span className={styles.delete}>Excluir Post</span>
+                                    </Link>
                                 </footer>
                             )}
                             <hr></hr>

@@ -19,7 +19,8 @@ function Profile(){
     useEffect(() => {
         async function getProfile(){
             await delay(2000);
-            const response = await fetch(`https://api-social-network.vercel.app/posts/${id}`);
+
+            const response = await fetch(`https://api-social-network.vercel.app/users/${id}`);
             const data = await response.json();
             setRemoveLoading(true);
             setProfile(data);

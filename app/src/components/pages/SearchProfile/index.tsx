@@ -15,7 +15,8 @@ function SearchProfile(){
     useEffect(() => {
         async function getProfiles(){
             await delay(1000)
-            const response = await fetch("https://api-social-network.vercel.app/posts");
+
+            const response = await fetch("https://api-social-network.vercel.app/users");
             const data = await response.json();
             setProfiles(data);
         }

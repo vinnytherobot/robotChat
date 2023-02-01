@@ -31,7 +31,7 @@ function Home(){
             const data = await response.json();
             setPosts(data);
         }
-        getPosts();
+        getPosts()
     }, [])
 
     return(

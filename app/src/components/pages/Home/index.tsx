@@ -65,7 +65,10 @@ function Home(){
                     ))}
                 </section>
             ) : (
-                <Loading/>
+                <>
+                    <Loading/>
+                    <h2>Loading...</h2>
+                </>
             )}
         </>
     )

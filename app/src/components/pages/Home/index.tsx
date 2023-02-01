@@ -65,10 +65,7 @@ function Home(){
                     ))}
                 </section>
             ) : (
-                <>
-                    <Loading/>
-                    <h2 className={styles.loadingText}>Loading...</h2>
-                </>
+                <Loading/>
             )}
         </>
     )

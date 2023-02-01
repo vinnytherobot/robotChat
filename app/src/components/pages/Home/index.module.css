@@ -69,6 +69,11 @@
     font-weight: 500;
 }
 
+.loadingText {
+    justify-content: center;
+    align-items: center;
+}
+
 @media (max-width: 1200px){
     .containerPosts {
         width: 50em;

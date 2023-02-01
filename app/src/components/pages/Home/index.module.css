@@ -70,8 +70,10 @@
 }
 
 .loadingText {
-    justify-content: center;
-    align-items: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    trasnform: translate(-50%, -55);
 }
 
 @media (max-width: 1200px){

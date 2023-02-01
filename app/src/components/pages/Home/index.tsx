@@ -67,7 +67,7 @@ function Home(){
             ) : (
                 <>
                     <Loading/>
-                    <h2>Loading...</h2>
+                    <h2 className={styles.loadingText}>Loading...</h2>
                 </>
             )}
         </>

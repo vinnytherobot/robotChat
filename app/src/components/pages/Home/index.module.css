@@ -69,13 +69,6 @@
     font-weight: 500;
 }
 
-.loadingText {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    trasnform: translate(-50%, -60%);
-}
-
 @media (max-width: 1200px){
     .containerPosts {
         width: 50em;

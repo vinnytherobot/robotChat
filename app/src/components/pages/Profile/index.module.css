@@ -32,7 +32,7 @@
     }
 
     .userCard .name {
-        text-align: center;
+        margin: 0 auto;
     }
 
     .userCard svg {

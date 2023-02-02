@@ -31,11 +31,11 @@
         gap: 3.5em;
     }
 
-    .userCard svg {
+    .userCard .name {
         margin: 0 auto;
     }
-    
-    .userCard .description {
+
+    .userCard svg {
         margin: 0 auto;
     }
 

@@ -27,7 +27,7 @@
         width: 25em;
         height: 30em;
         grid-template-columns: 20em;
-        grid-template-rows: 2em 8em 3em 1em;
+        grid-template-rows: 8em 8em 3em 1em;
         gap: 3.5em;
     }
 

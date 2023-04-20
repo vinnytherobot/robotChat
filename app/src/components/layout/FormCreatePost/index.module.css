@@ -1,13 +1,13 @@
 .form {
-    background: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #5555;
     padding: 2em 1em;
     height: 18em;
     width: 25em;
-    justify-content: center;
-    align-items: center;
     text-align: center;
-    margin: 0 auto;
-    margin-top: 7.5em;
     border-radius: 0.6em;
     box-shadow: 0px 0px 20px 6px rgba(0, 0, 0, 0.100);
     transition: all 0.8s ease;
@@ -21,21 +21,22 @@
     padding: 1em 1em;
     width: 20em;
     margin: 0 auto;
-    background: #f0f0f0;
-    color: #333;
-    height: 4.5em;
+    background: #444;
+    color: #cfcfcf;
+    height: 5.5em;
     font-size: 17px;
     font-weight: 500;
     border: none;
     border-radius: 0.6em;
     outline: none;
+    cursor: pointer;
 }
 
 .form .button{
-    background: #65FE;
+    background: #444;
     padding: 0.8em 1em;
     margin-top: 4.5em;
-    color: #fff;
+    color: #ccc;
     font-weight: 500;
     font-size: 17px;
     width: 20em;
@@ -47,7 +48,6 @@
     .form {
         width: 24em;
         height: 18em;
-        margin-top: 17em;
     }
 
     .form .messageInput {
@@ -56,5 +56,22 @@
 
     .form .button {
         width: 19em;
+    }
+}
+
+@media (max-width: 490px){
+    .form {
+        width: 17em;
+    }
+
+    .form .messageInput {
+        width: 15em;
+        height: 5em;
+        font-size: 1em;
+    }
+
+    .form .button {
+        width: 15em;
+        font-size: 1em;
     }
 }

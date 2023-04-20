@@ -4,14 +4,11 @@ import { PostData } from "../../../types/types";
 import { ChangeEvent, FormEvent, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import useDelay from "../../../hooks/useDelay";
-import SucessMessage from "../../layout/SucessMessage";
 
 function CreatePost(){
 
     const [post, setPost] = useState<PostData>(Object);
     const navigate = useNavigate();
-    const [clicked, setClicked] = useState(false);
-
     const delay = useDelay;
 
     if(!localStorage.getItem("login")){
@@ -40,8 +37,6 @@ function CreatePost(){
             body: JSON.stringify(userPost)
         })
 
-        setClicked(true);
-
         await delay(1500);
 
         navigate("/");
@@ -50,7 +45,6 @@ function CreatePost(){
 
     return(
         <>
-            {clicked && <SucessMessage message="Post criado com sucesso!"/>}
             <FormCreatePost handleChange={handleChange} handleSubmit={handleSubmit}/>
         </>
     )

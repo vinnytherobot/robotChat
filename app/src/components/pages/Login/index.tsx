@@ -5,11 +5,9 @@ import { FormEvent, ChangeEvent, useState } from "react"
 import { useNavigate } from "react-router-dom";
 
 import useDelay from "../../../hooks/useDelay";
-import SucessMessage from "../../layout/SucessMessage";
 
 function Login(){
     const [user, setUser] = useState<User>(Object);
-    const [clicked, setClicked] = useState(false);
     const navigate = useNavigate();
 
     const delay = useDelay;
@@ -42,8 +40,6 @@ function Login(){
         localStorage.setItem("description", ObjectUser.description);
         localStorage.setItem("login", token);
 
-        setClicked(true);
-
         await delay(1500);
 
         navigate("/myprofile");
@@ -52,7 +48,6 @@ function Login(){
 
     return(
         <>
-            {clicked && <SucessMessage message="Sua conta foi criada!" />}
             <FormLogin handleSubmit={handleSubmit} handleChange={handleChange}/>
         </>
     )

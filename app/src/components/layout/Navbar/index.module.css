@@ -2,7 +2,7 @@
     background: #202123;
     height: 5.5em;
     padding: 1em 2.5em;
-    box-shadow: 0px 0px 10px 6px rgba(0, 0, 0, 0.400);
+    box-shadow: 0px 0px 10px 6px rgba(0, 0, 0, 0.200);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -38,8 +38,6 @@
     color: #707070;
     font-size: 18px;
     font-weight: 600;
-    padding: 0.3em 1em;
-    border-radius: 1em;
     cursor: pointer;
     user-select: none;
     transition: all 0.8s ease;
@@ -55,13 +53,15 @@
     margin-top: 2em;
     display: block;
     background: #444;
-    width: 9.5em;
-    height: 9em;
     padding: 0.5em 1.5em;
     border-radius: 0.6em;
     box-shadow: 0px 0px 10px 6px rgba(0,0,0,0.100);
     align-items: center;
     justify-content: center;
+}
+
+.showExtraMenu nav .links {
+    padding: 0 1em;
 }
 
 .showExtraMenu nav .links .link a {
@@ -75,6 +75,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    cursor: pointer;
 }
 
 .navbar div a {

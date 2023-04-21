@@ -52,7 +52,7 @@ function Navbar(){
                     </ul>
                 </nav>
                 <div>
-                    <FaCaretDown size={25} color="#ccc  " onClick={handleShowExtraMenu}/>
+                    <FaCaretDown size={25} color="#ccc" onClick={handleShowExtraMenu}/>
                     {localStorage.getItem("login") && (
                         <Link to="/myprofile">
                             <FaUserCircle size={45} color="#ccc"/>

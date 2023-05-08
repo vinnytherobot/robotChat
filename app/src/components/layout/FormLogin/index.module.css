@@ -50,6 +50,10 @@
     border: none;
 }
 
+.form .button:hover {
+    border: 1px solid #ccc;
+}
+
 @media (max-width: 720px){
     .form {
         width: 24em;
